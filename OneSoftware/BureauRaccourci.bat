@@ -13,7 +13,7 @@ set "desktop=%USERPROFILE%\Desktop"
 :: Créer le raccourci sur le bureau
 set "shortcut=%desktop%\NovaONE.lnk"
 
-:: Utiliser PowerShell pour créer le raccourci et le configurer en mode minimisé
-powershell "$WScriptShell = New-Object -ComObject WScript.Shell; $shortcut = $WScriptShell.CreateShortcut('%shortcut%'); $shortcut.TargetPath = '%target_file%'; $shortcut.WindowStyle = 7; $shortcut.Save()"
+:: Utiliser PowerShell pour créer le raccourci et le configurer en mode normal (window style = 1)
+powershell "$WScriptShell = New-Object -ComObject WScript.Shell; $shortcut = $WScriptShell.CreateShortcut('%shortcut%'); $shortcut.TargetPath = '%target_file%'; $shortcut.WindowStyle = 1; $shortcut.Save()"
 
 exit
